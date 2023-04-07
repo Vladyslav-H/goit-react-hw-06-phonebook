@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   width: 300px;
   padding: 20px;

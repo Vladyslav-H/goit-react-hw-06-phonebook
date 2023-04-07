@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const FormStyled = styled.form`
-  width: 300px;
+  width: 400px;
   padding: 20px;
-  background-color: #8cd14e;
+  margin-top:20px;
+  margin-bottom:50px;
+  background-color: #e0a219;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -22,8 +24,8 @@ export const Button = styled.button`
   background-color: #ffc459;
   font-size: 18px;
   box-shadow: 4px 0px 16px 0px rgba(0, 0, 0, 0.75);
-  transition: transform 250ms linear, color 250ms linear,
-    background-color 250ms linear;
+  transition: all 250ms linear;
+    
 
   &:hover
  {
