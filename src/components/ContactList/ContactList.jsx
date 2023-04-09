@@ -17,14 +17,18 @@ const ContactList = () => {
   const filteredContacts = filterVisible();
   return (
     <ul>
-      {contacts.length ? filteredContacts.map(({ id, name, number }) => (
-        <ContactItem
-          key={id}
-          name={name}
-          number={number}
-          id={id}
-        ></ContactItem>
-      )) : <h3>You don't have any contacts yet</h3>}
+      {contacts.length ? (
+        filteredContacts.map(({ id, name, number }) => (
+          <ContactItem
+            key={id}
+            name={name}
+            number={number}
+            id={id}
+          ></ContactItem>
+        ))
+      ) : (
+        <h3>You don't have any contacts yet</h3>
+      )}
     </ul>
   );
 };

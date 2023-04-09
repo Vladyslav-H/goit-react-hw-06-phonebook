@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FormStyled, Button, Label, Input } from './Form.styled';
 import uniqid from 'uniqid';
 
 import { add } from 'redux/contacts/contactsSlice';
-// import { addContact } from 'redux/contacts/contactsActions';
+import { MdPersonAddAlt1 } from 'react-icons/md';
 
 export const Form = () => {
   const [name, setName] = useState('');
@@ -58,7 +57,7 @@ export const Form = () => {
         <Input
           type="text"
           name="name"
-          placeholder="name"
+          placeholder="Ivan Ivanenko"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
@@ -67,11 +66,11 @@ export const Form = () => {
         />
       </Label>
       <Label>
-        <span> Number</span>
+        <span>Number</span>
         <Input
           type="tel"
           name="number"
-          placeholder="number"
+          placeholder="050 123 45 67"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
@@ -79,7 +78,10 @@ export const Form = () => {
           onChange={handleInputChange}
         />
       </Label>
-      <Button type="submit"> Add contact</Button>
+      <Button type="submit">
+        {' '}
+        Add contact <MdPersonAddAlt1 />
+      </Button>
     </FormStyled>
   );
 };

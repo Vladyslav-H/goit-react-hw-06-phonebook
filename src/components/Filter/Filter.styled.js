@@ -12,7 +12,11 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-width: 200px;
-height: 25px;
-background-color: RGBA(255,210,80,0.56);
-`
+  width: 200px;
+  height: 25px;
+  background-color: #f1da8d;
+
+  &:focus {
+    background-color: #e4ecfc;
+  }
+`;
