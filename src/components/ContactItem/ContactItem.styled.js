@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const ButtonDel = styled.div`
   width: 100px;
-
   margin-left: 20px;
   padding: 4px;
   display: flex;
@@ -10,7 +9,6 @@ export const ButtonDel = styled.div`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-
   color: #ffc459;
   background-color: red;
   box-shadow: 4px 0px 16px -2px rgba(0, 0, 0, 0.5);

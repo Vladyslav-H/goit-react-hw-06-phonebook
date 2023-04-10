@@ -19,7 +19,7 @@ const ContactItem = ({ name, number, id }) => {
     <ContactItemStyled>
       {name}: {number}
       <ButtonDel type="button" onClick={open}>
-        Remove{' '}
+        Remove
         <MdPersonRemoveAlt1
           style={{
             display: 'block',

@@ -4,12 +4,12 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 50px;
+  padding: 20px;
 `;
 
 export const ContactContainer = styled.div`
-  width: 600px;
-  min-height: 200px;
+  min-width: 400px;
+  min-height: 250px;
   padding: 20px;
   display: flex;
   align-items: center;

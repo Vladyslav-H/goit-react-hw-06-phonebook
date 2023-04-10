@@ -45,9 +45,9 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  margin-left: 30px;
   width: 200px;
   height: 25px;
+  margin-left: 30px;
   background-color: #f1da8d;
 
   &:focus {

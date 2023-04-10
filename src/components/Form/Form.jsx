@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { FormStyled, Button, Label, Input } from './Form.styled';
-import uniqid from 'uniqid';
-
 import { add } from 'redux/contacts/contactsSlice';
 import { MdPersonAddAlt1 } from 'react-icons/md';
+import uniqid from 'uniqid';
+
+import { FormStyled, Button, Label, Input } from './Form.styled';
 
 export const Form = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(state => state.contacts.contacts);
 
   const dispatch = useDispatch();
 
@@ -31,14 +31,12 @@ export const Form = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // localStorage.setItem('contacts', JSON.stringify(this.state))
 
     const newContact = contacts.find(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
     if (newContact) {
       return alert(`${name} is alredy in contacts`);
-      //    localStorage.setItem('contacts', JSON.stringify(contacts));
     }
 
     dispatch(add({ name, number, id: uniqid() }));
@@ -79,7 +77,6 @@ export const Form = () => {
         />
       </Label>
       <Button type="submit">
-        {' '}
         Add contact <MdPersonAddAlt1 />
       </Button>
     </FormStyled>

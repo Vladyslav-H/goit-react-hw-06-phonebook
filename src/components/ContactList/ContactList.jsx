@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import ContactItem from 'components/ContactItem/ContactItem';
 
 const ContactList = () => {
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(state => state.contacts.contacts);
   const filter = useSelector(state => state.filter);
 
   const filterVisible = () => {
@@ -17,7 +17,11 @@ const ContactList = () => {
   const filteredContacts = filterVisible();
   return (
     <ul>
-      {contacts.length ? (
+      {!contacts.length ? (
+        <h3>You don't have any contacts yet</h3>
+      ) : !filteredContacts.length ? (
+        <h3>No matches found</h3>
+      ) : (
         filteredContacts.map(({ id, name, number }) => (
           <ContactItem
             key={id}
@@ -26,8 +30,6 @@ const ContactList = () => {
             id={id}
           ></ContactItem>
         ))
-      ) : (
-        <h3>You don't have any contacts yet</h3>
       )}
     </ul>
   );

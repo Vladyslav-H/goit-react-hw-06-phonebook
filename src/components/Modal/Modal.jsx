@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { remove } from 'redux/contacts/contactsSlice';
+import { CiFaceFrown, CiFaceSmile } from 'react-icons/ci';
+
 import {
   ModalWrapp,
   BtnN,
@@ -8,8 +10,6 @@ import {
   ButtonWrapp,
 } from './Modal.styled';
 
-import { CiFaceFrown, CiFaceSmile } from 'react-icons/ci';
-
 const Modal = ({ id, onClose, name }) => {
   const dispatch = useDispatch();
   return (
@@ -17,7 +17,7 @@ const Modal = ({ id, onClose, name }) => {
       <h4>
         You wont to remove <span>'{name}'</span>!
       </h4>
-      Are you shore?
+      Are you sure?
       <ButtonWrapp>
         <BtnN type="button" onClick={onClose}>
           <span> No</span> <CiFaceSmile style={IconStyled} />

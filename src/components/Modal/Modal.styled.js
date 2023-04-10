@@ -25,14 +25,14 @@ export const ButtonWrapp = styled.div`
 `;
 
 export const Btn = styled.div`
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
-  width: 100%;
-  height: auto;
   border: none;
   font-weight: 700;
   color: white;
